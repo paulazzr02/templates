@@ -1,0 +1,59 @@
+<!Doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky header advanced</title>
+  <style>
+    /* reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+    }
+
+    /* temp */
+    header, footer, article, nav, aside {
+      padding: 1em;
+    }
+    header, footer {
+      background-color: gainsboro;
+    }
+    nav {
+      background-color: seagreen;
+    }
+    aside {
+      background-color: coral;
+    }
+
+    /* user layout */
+    html, body {
+      height: 100%;
+    }
+    .page-header, .page-footer {
+      height: 150px;
+    }
+    .page-main {
+      display: flex;
+      height: calc(100% - 300px);
+    }
+    .page-main > article {
+      flex: 1;
+    }
+    .page-main > nav,
+    .page-main > aside {
+      flex: 0 0 150px;
+    }
+  </style>
+</head>
+<body class="user-layout">
+  <header class="page-header">Header</header>
+  <main class="page-main">
+    <nav>Nav</nav>
+    <article>Article</article>
+    <aside>Aside</aside>
+  </main>
+  <footer class="page-footer">Footer</footer>
+</body>
+</html>
